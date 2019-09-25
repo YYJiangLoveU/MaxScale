@@ -49,7 +49,7 @@ MYSQL* mxs_mysql_real_connect(MYSQL* con, SERVER* server, const char* user, cons
     char yes = 1;
     mysql_optionsv(con, MYSQL_OPT_RECONNECT, &yes);
     mysql_optionsv(con, MYSQL_INIT_COMMAND, "SET SQL_MODE=''");
-	mysql_optionsv(con, MYSQL_OPT_CONNECT_ATTR_ADD, "_server_host", server->address);
+    mysql_optionsv(con, MYSQL_OPT_CONNECT_ATTR_ADD, "_server_host", server->address);
 
     MXS_CONFIG* config = config_get_global_options();
 
